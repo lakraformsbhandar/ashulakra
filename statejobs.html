@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakra Form’s Bhandar</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #cce7ff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        /* Navigation Bar */
+        .navbar {
+            background-color: #0073e6;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px 10px;
+            background-color: #004c99;
+            border-radius: 5px;
+        }
+
+        /* Animated Website Name */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            background: black;
+            padding: 10px;
+        }
+        .marquee-text {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: bold;
+            color: cyan;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        /* Animated Table */
+        .animated-table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        .animated-table td {
+            padding: 15px;
+            background: #0073e6;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            border: 2px solid white;
+            position: relative;
+            animation: slide-up 1s ease-in-out;
+        }
+        .animated-table td a {
+            color: white;
+            text-decoration: none;
+        }
+        @keyframes slide-up {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Blank Dark Card for Long Text */
+        .dark-card {
+            width: 90%;
+            margin: 20px auto;
+            padding: 20px;
+            background: #222;
+            color: white;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #004c99;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .contact a {
+            display: block;
+            background: white;
+            color: #004c99;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px auto;
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            .marquee-text {
+                font-size: 18px;
+            }
+            .animated-table td {
+                font-size: 16px;
+            }
+            .dark-card {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <span>Lakra Form’s Bhandar</span>
+        <div class="nav-links">
+            <a href="https://maps.app.goo.gl/uaGuSc2ch4ECRyuw9">Location</a>
+            <a href="https://chat.whatsapp.com/FTlKGauTO3l1KVBoTTccUc">WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- Animated Website Name -->
+    <div class="marquee-container">
+        <span class="marquee-text">Lakra Form’s Bhandar - ASHU LAKRA</span>
+    </div>
+
+    <!-- Table with Links -->
+    <table class="animated-table">
+        <tr>
+            <td><a href="govtjob.html">GOVERNMENT JOBS</a></td>
+            <td><a href="govtscheme.html">Government Schemes</a></td>
+            <td><a href="govtexam.html">Government exam's</a></td>
+        </tr>
+    </table>
+
+    <!-- Dark Card for Long Text -->
+    <div class="dark-card">
+        <p>
+            <br>
+            <br>
+            <br> <br>
+            <br>
+            <br> <br>
+            <br>
+            <br>
+        </p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact">
+        <h3>हरियाणा सरल केंद्र & Centre Govt. Services</h3>
+        <p>FOR MORE DETAILS CONTACT AT: <br>
+        <strong>आशु लाकड़ा (अटल सेवा केंद्र)</strong><br>
+        Phone: +91 9306560415<br>
+        Email: Lakraashu01@gmail.com<br>
+        Sandal Khurd, near milk dairy, Haryana 131001.</p>
+
+        <a href="https://maps.app.goo.gl/uaGuSc2ch4ECRyuw9">Location</a>
+        <a href="https://chat.whatsapp.com/FTlKGauTO3l1KVBoTTccUc">WhatsApp Group</a>
+    </div>
+
+</body>
+</html>
