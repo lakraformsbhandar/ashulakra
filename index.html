@@ -122,14 +122,51 @@
             background-color: red;
         }
         /* Contact Section */
-        .contact {
-            margin: 20px auto;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content2 {
+            flex: 1;
+        }
+        footer {
+            margin-top: auto;
             text-align: center;
             padding: 15px;
-            background-color: #fff;
-            border-radius: 5px;
+            background-color: #f8f9fa;
+            border-radius: 15px 15px 0 0;
             box-shadow: 0px 0px 8px gray;
-            width: 85%;
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+        footer h2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+        .contact-details {
+            display: none;
+            margin-top: 10px;
+        }
+        .arrow {
+            font-size: 18px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .rotate {
+            transform: rotate(180deg);
+        }
         }
         .contact button {
             padding: 8px;
@@ -213,15 +250,34 @@
         <a href="upcomingvacancy.html" target="_blank">Upcoming Vacancy</a>
     </div>
 
-    <!-- Contact Section -->
-    <div class="contact">
-        <h2>हरियाणा सरल केंद्र & Centre Govt. Services</h2>
-        <p>For more details, contact:</p>
-        <p><strong>आशु लाकड़ा</strong> (अटल सेवा केंद्र)</p>
-        <p>📧 Email: <a href="mailto:Lakraashu01@gmail.com">Lakraashu01@gmail.com</a></p>
-        <p>📍 Address: Sandal Khurd, near milk dairy, Haryana 131001</p>
-        <p>📞 Contact No: <a href="tel:+919306560415">+91 9306560415</a></p>
+    <div class="content2">
+        <!-- Main Content Goes Here -->
     </div>
+
+    <footer>
+        <h2 onclick="toggleContact()">हरियाणा सरल केंद्र CLICK HERE FOR CONTACT DETAILS<span class="arrow">▼</span></h2>
+        <div class="contact-details" id="contactDetails">
+            <p>For more details, contact:</p>
+            <p><strong>आशु लाकड़ा</strong> (अटल सेवा केंद्र)</p>
+            <p>📧 Email: <a href="mailto:Lakraashu01@gmail.com">Lakraashu01@gmail.com</a></p>
+            <p>📍 Address: Sandal Khurd, near milk dairy, Haryana 131001</p>
+            <p>📞 Contact No: <a href="tel:+919306560415">+91 9306560415</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleContact() {
+            var details = document.getElementById("contactDetails");
+            var arrow = document.querySelector(".arrow");
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+                arrow.classList.add("rotate");
+            } else {
+                details.style.display = "none";
+                arrow.classList.remove("rotate");
+            }
+        }
+    </script>
 
 </body>
 </html>
